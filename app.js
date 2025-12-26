@@ -1,6 +1,5 @@
 // ReelBerlin Demo - API Integration
-// API URL is injected via config.js or defaults to localhost
-const API_BASE_URL = window.__REELBERLIN_API_URL__ || 'http://localhost:3000';
+const API_BASE_URL = 'https://instagramreelposter-production.up.railway.app';
 
 const form = document.getElementById('reelForm');
 const resultSection = document.getElementById('result');
