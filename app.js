@@ -13,20 +13,20 @@ const submitBtn = document.querySelector('.submit-btn');
 const btnText = document.querySelector('.btn-text');
 const btnLoader = document.querySelector('.btn-loader');
 
-// Status messages for each step
+// Status-Nachrichten für jeden Schritt
 const STATUS_MESSAGES = {
-    pending: { title: '⏳ Queued', message: 'Your request is in the queue...', progress: 5 },
-    transcribing: { title: '🎤 Analyzing', message: 'Reading your website content...', progress: 10 },
-    planning: { title: '🧠 Planning', message: 'Detecting business category...', progress: 20 },
-    generating_commentary: { title: '✍️ Writing', message: 'Creating promotional script...', progress: 30 },
-    synthesizing_voiceover: { title: '🗣️ Voice', message: 'Generating voiceover...', progress: 45 },
-    selecting_music: { title: '🎵 Music', message: 'Selecting background music...', progress: 55 },
-    generating_images: { title: '🎨 Visuals', message: 'Creating images...', progress: 70 },
-    generating_subtitles: { title: '📝 Subtitles', message: 'Adding captions...', progress: 80 },
-    building_manifest: { title: '📦 Building', message: 'Preparing video...', progress: 85 },
-    rendering: { title: '🎬 Rendering', message: 'Rendering final video...', progress: 95 },
-    completed: { title: '✅ Complete', message: 'Your reel is ready!', progress: 100 },
-    failed: { title: '❌ Failed', message: 'Something went wrong.', progress: 0 },
+    pending: { title: '⏳ In Warteschlange', message: 'Ihre Anfrage befindet sich in der Warteschlange...', progress: 5 },
+    transcribing: { title: '🎤 Analyse', message: 'Inhalt Ihrer Website wird gelesen...', progress: 10 },
+    planning: { title: '🧠 Planung', message: 'Branchenkategorie wird erkannt...', progress: 20 },
+    generating_commentary: { title: '✍️ Schreiben', message: 'Promo-Skript wird erstellt...', progress: 30 },
+    synthesizing_voiceover: { title: '🗣️ Stimme', message: 'Voiceover wird generiert...', progress: 45 },
+    selecting_music: { title: '🎵 Musik', message: 'Hintergrundmusik wird ausgewählt...', progress: 55 },
+    generating_images: { title: '🎨 Visuals', message: 'Bilder werden erstellt...', progress: 70 },
+    generating_subtitles: { title: '📝 Untertitel', message: 'Untertitel werden hinzugefügt...', progress: 80 },
+    building_manifest: { title: '📦 Erstellung', message: 'Video wird vorbereitet...', progress: 85 },
+    rendering: { title: '🎬 Rendering', message: 'Finales Video wird gerendert...', progress: 95 },
+    completed: { title: '✅ Fertig', message: 'Ihr Reel ist bereit!', progress: 100 },
+    failed: { title: '❌ Fehlgeschlagen', message: 'Etwas ist schief gelaufen.', progress: 0 },
 };
 
 // Handle form submission
