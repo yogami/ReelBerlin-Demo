@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zur Goldenen Gans | Traditional German Restaurant in Berlin-Charlottenburg</title>
+    <meta name="description"
+        content="Authentic German cuisine with a modern twist. Schnitzel, Sauerbraten, and craft beers in a cozy Charlottenburg setting. Reservations recommended.">
+    <meta name="keywords"
+        content="restaurant, german food, schnitzel, sauerbraten, beer, charlottenburg, berlin, dinner, traditional, authentic cuisine">
+    <meta property="og:title" content="Zur Goldenen Gans - Berlin's Best Traditional Restaurant">
+    <meta property="og:description" content="Where tradition meets taste. Book your table today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lora:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --wood: #4a3728;
+            --gold: #d4a855;
+            --cream: #f9f5f0;
+            --green: #2d5a27;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', Georgia, serif;
+            background: var(--cream);
+            color: var(--wood);
+            line-height: 1.7;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(rgba(74, 55, 40, 0.85), rgba(74, 55, 40, 0.85)),
+                url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200') center/cover;
+            color: var(--cream);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--wood);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--wood);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid var(--gold);
+        }
+
+        .menu-item h3 {
+            color: var(--wood);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .menu-item .price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 0.75rem;
+        }
+
+        .awards {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+
+        .award {
+            text-align: center;
+        }
+
+        .award-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-left: 4px solid var(--gold);
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: var(--wood);
+            color: var(--cream);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .reservation-cta {
+            background: var(--gold);
+            color: var(--wood);
+            padding: 1rem 2rem;
+            display: inline-block;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <h1>Zur Goldenen Gans</h1>
+        <p class="subtitle">Est. 1923 • Berlin-Charlottenburg</p>
+        <p class="tagline">
+            Authentic German cuisine passed down through four generations.
+            Where tradition meets the finest local ingredients.
+        </p>
+        <a href="#reservierung" class="cta-btn">🍽️ Reserve Your Table</a>
+    </header>
+
+    <section class="section">
+        <h2>Our Signature Dishes</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>🥩 Wiener Schnitzel</h3>
+                <p>Golden-fried veal cutlet, hand-breaded, served with potato salad and cranberry jam. Grandmother's
+                    recipe.</p>
+                <p class="price">€24.90</p>
+            </div>
+            <div class="menu-item">
+                <h3>🍖 Sauerbraten</h3>
+                <p>Slow-braised beef marinated for 7 days, red cabbage, and silky potato dumplings.</p>
+                <p class="price">€22.50</p>
+            </div>
+            <div class="menu-item">
+                <h3>🦆 Crispy Duck</h3>
+                <p>Half duck roasted to perfection, served with apple-red cabbage and bread dumplings.</p>
+                <p class="price">€28.00</p>
+            </div>
+            <div class="menu-item">
+                <h3>🍰 Apfelstrudel</h3>
+                <p>Warm apple strudel with vanilla sauce and a scoop of homemade cinnamon ice cream.</p>
+                <p class="price">€9.50</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: white; max-width: 100%; padding: 4rem 2rem;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2>Recognized Excellence</h2>
+            <div class="awards">
+                <div class="award">
+                    <div class="award-icon">🏆</div>
+                    <p><strong>Best Traditional Restaurant</strong><br>Berlin Food Awards 2024</p>
+                </div>
+                <div class="award">
+                    <div class="award-icon">⭐</div>
+                    <p><strong>4.8 on Google</strong><br>1,200+ reviews</p>
+                </div>
+                <div class="award">
+                    <div class="award-icon">📰</div>
+                    <p><strong>Featured in</strong><br>Zeit Magazine, Tagesspiegel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="font-size: 1.2rem; font-style: italic;">
+                "The best Schnitzel I've ever had outside of Vienna. The atmosphere transports you
+                to old Berlin. We come here every anniversary."
+            </p>
+            <p style="margin-top: 1rem; color: #666;">— Hans & Greta M., regulars since 2015</p>
+        </div>
+        <p style="text-align: center; color: var(--green); font-weight: 500;">
+            "A culinary time machine" — Berliner Zeitung
+        </p>
+    </section>
+
+    <footer id="reservierung">
+        <h2 style="color: var(--gold); margin-bottom: 1rem;">Reserve Your Experience</h2>
+        <p style="margin-bottom: 0.5rem;">📍 Kurfürstendamm 156, 10709 Berlin-Charlottenburg</p>
+        <p style="margin-bottom: 0.5rem;">📞 +49 30 123 4567</p>
+        <p style="color: var(--gold);">Tue-Sun 17:00 - 23:00 • Closed Mondays</p>
+        <a href="tel:+493012345678" class="reservation-cta">📞 Call to Reserve</a>
+        <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
+            ⚠️ Weekend tables fill quickly — we recommend booking 3+ days ahead
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreuzberg Kaffee | Specialty Coffee in Berlin-Kreuzberg</title>
+    <meta name="description"
+        content="Handcrafted specialty coffee in the heart of Kreuzberg. Fresh roasted beans, cozy atmosphere, and the best flat whites in Berlin. Open daily 8-18.">
+    <meta name="keywords"
+        content="coffee, cafe, kreuzberg, berlin, specialty coffee, flat white, espresso, coworking, breakfast">
+    <meta property="og:title" content="Kreuzberg Kaffee - Your Neighborhood Coffee Spot">
+    <meta property="og:description" content="Where Berlin's best coffee meets Kreuzberg vibes">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --coffee: #3d2314;
+            --cream: #f5f0e8;
+            --gold: #c9a962;
+            --warm: #8b6914;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--coffee);
+            line-height: 1.6;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--coffee) 0%, #5a3825 100%);
+            color: var(--cream);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--gold);
+            color: var(--coffee);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--coffee);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .stars {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: var(--coffee);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .hours {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .address {
+            color: var(--gold);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <h1>Kreuzberg Kaffee</h1>
+        <p class="tagline">Where Every Cup Tells a Story</p>
+        <p style="max-width: 600px; margin-bottom: 2rem;">
+            Handcrafted specialty coffee in the heart of Berlin-Kreuzberg.
+            Fresh roasted beans, cozy atmosphere, and the best flat whites in town.
+        </p>
+        <a href="#menu" class="cta-btn">☕ View Our Menu</a>
+    </header>
+
+    <section class="section">
+        <h2>Why Locals Love Us</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">☕</div>
+                <h3>Single Origin Beans</h3>
+                <p>Roasted weekly from Ethiopian & Colombian farms</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🥐</div>
+                <h3>Fresh Pastries</h3>
+                <p>Baked daily by our in-house baker</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💻</div>
+                <h3>Laptop Friendly</h3>
+                <p>Fast WiFi & plenty of power outlets</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌱</div>
+                <h3>100% Organic</h3>
+                <p>Sustainable, fair-trade sourcing</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="menu">
+        <h2>Our Bestsellers</h2>
+        <ul style="list-style: none; font-size: 1.1rem;">
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid #ddd;">
+                <strong>Kreuzberg Flat White</strong> — Silky smooth, double shot — €4.50
+            </li>
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid #ddd;">
+                <strong>Cold Brew Nitro</strong> — Creamy, refreshing, on tap — €5.00
+            </li>
+            <li style="padding: 0.75rem 0; border-bottom: 1px solid #ddd;">
+                <strong>Avocado Toast</strong> — Sourdough, poached egg, chili flakes — €9.50
+            </li>
+            <li style="padding: 0.75rem 0;">
+                <strong>Homemade Carrot Cake</strong> — Cream cheese frosting — €4.00
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>What Our Guests Say</h2>
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"Best coffee in Kreuzberg, hands down. The flat white is perfect and the staff remembers your order. My
+                go-to spot for remote work!"</p>
+            <p style="margin-top: 1rem; color: #666;">— Maria S., 500+ visits</p>
+        </div>
+        <p style="text-align: center; font-size: 1.2rem; color: var(--warm);">
+            <strong>4.9 ★</strong> on Google • <strong>800+ reviews</strong>
+        </p>
+    </section>
+
+    <footer>
+        <p class="hours">📍 Open Daily 8:00 - 18:00</p>
+        <p class="address">Oranienstraße 42, 10999 Berlin-Kreuzberg</p>
+        <p style="margin-top: 1rem; opacity: 0.7;">Follow us @kreuzbergkaffee</p>
+    </footer>
+</body>
+
+</html>
