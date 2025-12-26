@@ -1,6 +1,6 @@
 // ReelBerlin Demo - API Integration
-// Configure your API endpoint here
-const API_BASE_URL = 'https://your-api.railway.app'; // TODO: Replace with your Railway URL
+// API URL is injected via config.js or defaults to localhost
+const API_BASE_URL = window.__REELBERLIN_API_URL__ || 'http://localhost:3000';
 
 const form = document.getElementById('reelForm');
 const resultSection = document.getElementById('result');

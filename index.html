@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReelBerlin | AI-Powered Promo Reels for Local Businesses</title>
-    <meta name="description" content="Generate viral Instagram Reels for your Berlin business in seconds. Just paste your website URL.">
+    <meta name="description"
+        content="Generate viral Instagram Reels for your Berlin business in seconds. Just paste your website URL.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Config injected at build time -->
+    <script src="config.js"></script>
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -27,22 +32,13 @@
                 <form id="reelForm" class="form">
                     <div class="input-group">
                         <label for="websiteUrl">Your Business Website</label>
-                        <input 
-                            type="url" 
-                            id="websiteUrl" 
-                            placeholder="https://your-cafe.de" 
-                            required
-                        >
+                        <input type="url" id="websiteUrl" placeholder="https://your-cafe.de" required>
                     </div>
 
                     <div class="input-row">
                         <div class="input-group">
                             <label for="businessName">Business Name (optional)</label>
-                            <input 
-                                type="text" 
-                                id="businessName" 
-                                placeholder="Kreuzberg Coffee"
-                            >
+                            <input type="text" id="businessName" placeholder="Kreuzberg Coffee">
                         </div>
                         <div class="input-group">
                             <label for="category">Category (optional)</label>
@@ -60,7 +56,8 @@
 
                     <div class="consent-group">
                         <input type="checkbox" id="consent" required>
-                        <label for="consent">I confirm I own this website or have permission to create promotional content from it.</label>
+                        <label for="consent">I confirm I own this website or have permission to create promotional
+                            content from it.</label>
                     </div>
 
                     <button type="submit" class="submit-btn">
@@ -103,4 +100,5 @@
 
     <script src="app.js"></script>
 </body>
+
 </html>
