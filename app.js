@@ -62,7 +62,7 @@ form.addEventListener('submit', async (e) => {
         const media = getMediaPayload();
 
         // Submit job to API
-        const response = await fetch(`${API_BASE_URL}/api/reels/website`, {
+        const response = await fetch(`${API_BASE_URL}/api/website`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -104,7 +104,7 @@ async function pollJobStatus(jobId) {
 
     while (attempts < maxAttempts) {
         try {
-            const response = await fetch(`${API_BASE_URL}/api/jobs/${jobId}`);
+            const response = await fetch(`${API_BASE_URL}/jobs/${jobId}`);
             const job = await response.json();
 
             updateStatus(job.status, job.statusMessage);
