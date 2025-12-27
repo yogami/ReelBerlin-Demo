@@ -12,6 +12,12 @@ const downloadLink = document.getElementById('downloadLink');
 const submitBtn = document.querySelector('.submit-btn');
 const btnText = document.querySelector('.btn-text');
 const btnLoader = document.querySelector('.btn-loader');
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const previewContainer = document.getElementById('previewContainer');
+
+// Store uploaded files as base64
+let uploadedFiles = [];
 
 // Status-Nachrichten für jeden Schritt
 const STATUS_MESSAGES = {
@@ -52,6 +58,9 @@ form.addEventListener('submit', async (e) => {
     videoContainer.classList.add('hidden');
 
     try {
+        // Get uploaded media as base64 array
+        const media = getMediaPayload();
+
         // Submit job to API
         const response = await fetch(`${API_BASE_URL}/api/reels/website`, {
             method: 'POST',
@@ -62,6 +71,7 @@ form.addEventListener('submit', async (e) => {
                 category: category || undefined,
                 consent: true,
                 language: language,
+                media: media.length > 0 ? media : undefined,
             }),
         });
 
@@ -167,3 +177,82 @@ async function checkApiHealth() {
 }
 
 checkApiHealth();
+
+// ===== FILE UPLOAD HANDLING =====
+
+// Drag and drop events
+dropZone.addEventListener('click', () => fileInput.click());
+dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('dragover');
+});
+dropZone.addEventListener('dragleave', () => {
+    dropZone.classList.remove('dragover');
+});
+dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    handleFiles(e.dataTransfer.files);
+});
+fileInput.addEventListener('change', (e) => {
+    handleFiles(e.target.files);
+});
+
+// Handle file selection
+function handleFiles(files) {
+    const maxFiles = 5;
+    const remainingSlots = maxFiles - uploadedFiles.length;
+
+    if (remainingSlots <= 0) {
+        alert('Maximal 5 Bilder erlaubt.');
+        return;
+    }
+
+    const filesToProcess = Array.from(files).slice(0, remainingSlots);
+
+    filesToProcess.forEach(file => {
+        if (!file.type.startsWith('image/')) {
+            console.warn('Skipping non-image file:', file.name);
+            return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const base64 = e.target.result;
+            uploadedFiles.push({
+                name: file.name,
+                base64: base64,
+            });
+            renderPreviews();
+        };
+        reader.readAsDataURL(file);
+    });
+}
+
+// Render image previews
+function renderPreviews() {
+    previewContainer.innerHTML = '';
+    uploadedFiles.forEach((file, index) => {
+        const item = document.createElement('div');
+        item.className = 'preview-item';
+        item.innerHTML = `
+            <img src="${file.base64}" alt="${file.name}">
+            <button type="button" class="preview-remove" data-index="${index}">×</button>
+        `;
+        previewContainer.appendChild(item);
+    });
+
+    // Add remove handlers
+    document.querySelectorAll('.preview-remove').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            uploadedFiles.splice(index, 1);
+            renderPreviews();
+        });
+    });
+}
+
+// Convert uploadedFiles to media array for API
+function getMediaPayload() {
+    return uploadedFiles.map(f => f.base64);
+}
