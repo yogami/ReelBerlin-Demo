@@ -1,0 +1,29 @@
+ INFO  Accepting connections at http://localhost:8080
+ HTTP  12/27/2025 1:18:57 AM ::1 GET /
+ HTTP  12/27/2025 1:18:57 AM ::1 Returned 200 in 62 ms
+ HTTP  12/27/2025 1:18:57 AM ::1 GET /style.css
+ HTTP  12/27/2025 1:18:57 AM ::1 GET /app.js
+ HTTP  12/27/2025 1:18:57 AM ::1 Returned 200 in 7 ms
+ HTTP  12/27/2025 1:18:57 AM ::1 Returned 200 in 9 ms
+ HTTP  12/27/2025 1:18:57 AM ::1 GET /favicon.ico
+ HTTP  12/27/2025 1:18:57 AM ::1 Returned 404 in 3 ms
+ HTTP  12/27/2025 1:20:23 AM 176.65.148.66 HEAD /
+ HTTP  12/27/2025 1:20:23 AM 176.65.148.66 Returned 200 in 3 ms
+ HTTP  12/27/2025 1:20:23 AM 176.65.148.66 GET /
+ HTTP  12/27/2025 1:20:23 AM 176.65.148.66 Returned 206 in 2 ms
+ HTTP  12/27/2025 1:20:24 AM 176.65.148.66 HEAD /_next
+ HTTP  12/27/2025 1:20:24 AM 176.65.148.66 Returned 404 in 1 ms
+ HTTP  12/27/2025 1:20:25 AM ::1 GET /index.html
+ HTTP  12/27/2025 1:20:25 AM ::1 Returned 301 in 1 ms
+ HTTP  12/27/2025 1:20:25 AM ::1 GET /index
+ HTTP  12/27/2025 1:20:25 AM ::1 Returned 301 in 0 ms
+ HTTP  12/27/2025 1:20:25 AM ::1 GET /
+ HTTP  12/27/2025 1:20:25 AM ::1 Returned 304 in 1 ms
+ HTTP  12/27/2025 1:20:26 AM 176.65.148.66 POST /
+ HTTP  12/27/2025 1:20:26 AM 176.65.148.66 Returned 200 in 2 ms
+ HTTP  12/27/2025 1:20:28 AM 176.65.148.66 POST /_next
+ HTTP  12/27/2025 1:20:28 AM 176.65.148.66 Returned 404 in 1 ms
+ HTTP  12/27/2025 1:24:56 AM 204.76.203.212 GET /
+ HTTP  12/27/2025 1:24:56 AM 204.76.203.212 Returned 200 in 5 ms
+
+ INFO  Gracefully shutting down. Please wait...

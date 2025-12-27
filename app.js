@@ -36,6 +36,7 @@ form.addEventListener('submit', async (e) => {
     const websiteUrl = document.getElementById('websiteUrl').value;
     const businessName = document.getElementById('businessName').value;
     const category = document.getElementById('category').value;
+    const language = document.getElementById('language').value;
     const consent = document.getElementById('consent').checked;
 
     if (!consent) {
@@ -60,6 +61,7 @@ form.addEventListener('submit', async (e) => {
                 businessName: businessName || undefined,
                 category: category || undefined,
                 consent: true,
+                language: language,
             }),
         });
 
