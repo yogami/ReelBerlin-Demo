@@ -1,4 +1,13 @@
 {
+  "name": "reelberlin-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
   "devDependencies": {
     "@playwright/test": "^1.57.0"
   }
