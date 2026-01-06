@@ -60,15 +60,34 @@
                         </div>
                     </div>
 
-                    <div class="upload-section">
-                        <label>Eigene Bilder/Videos (optional)</label>
-                        <p class="upload-hint">Laden Sie bis zu 5 Bilder hoch. KI füllt fehlende Szenen automatisch.</p>
-                        <div id="dropZone" class="drop-zone">
-                            <span class="drop-icon">📷</span>
-                            <span class="drop-text">Bilder hierher ziehen oder klicken</span>
-                            <input type="file" id="fileInput" accept="image/*" multiple hidden>
+                    <div class="upload-row">
+                        <div class="upload-section logo-upload">
+                            <label>Unternehmens-Logo (optional)</label>
+                            <p class="upload-hint">Erscheint am Anfang oder Ende.</p>
+                            <div id="logoDropZone" class="drop-zone mini">
+                                <span class="drop-icon">🏷️</span>
+                                <input type="file" id="logoInput" accept="image/*" hidden>
+                                <div id="logoPreview" class="logo-preview-img hidden"></div>
+                            </div>
+                            <div class="input-group">
+                                <select id="logoPosition">
+                                    <option value="end">Am Ende (Empfohlen)</option>
+                                    <option value="beginning">Am Anfang</option>
+                                    <option value="overlay">Durchgehend</option>
+                                </select>
+                            </div>
                         </div>
-                        <div id="previewContainer" class="preview-container"></div>
+
+                        <div class="upload-section main-upload">
+                            <label>Eigene Bilder/Videos (optional)</label>
+                            <p class="upload-hint">Bis zu 5 Bilder für die Szenen.</p>
+                            <div id="dropZone" class="drop-zone">
+                                <span class="drop-icon">📷</span>
+                                <span class="drop-text">Klicken oder Ziehen</span>
+                                <input type="file" id="fileInput" accept="image/*" multiple hidden>
+                            </div>
+                            <div id="previewContainer" class="preview-container"></div>
+                        </div>
                     </div>
 
                     <div class="consent-group">

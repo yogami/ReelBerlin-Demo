@@ -302,8 +302,39 @@ body {
 }
 
 /* Upload Zone */
-.upload-section {
+.upload-row {
+    display: flex;
+    gap: 1.5rem;
     margin-top: 1rem;
+}
+
+@media (max-width: 600px) {
+    .upload-row {
+        flex-direction: column;
+    }
+}
+
+.upload-section {
+    flex: 1;
+}
+
+.logo-upload {
+    flex: 0 0 200px;
+}
+
+.drop-zone.mini {
+    padding: 1.5rem;
+}
+
+.logo-preview-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
 }
 
 .upload-section label {

@@ -15,9 +15,14 @@ const btnLoader = document.querySelector('.btn-loader');
 const dropZone = document.getElementById('dropZone');
 const fileInput = document.getElementById('fileInput');
 const previewContainer = document.getElementById('previewContainer');
+const logoDropZone = document.getElementById('logoDropZone');
+const logoInput = document.getElementById('logoInput');
+const logoPreview = document.getElementById('logoPreview');
+const logoPosition = document.getElementById('logoPosition');
 
 // Store uploaded files as base64
 let uploadedFiles = [];
+let logoBase64 = null;
 
 // Status-Nachrichten für jeden Schritt
 const STATUS_MESSAGES = {
@@ -72,6 +77,8 @@ form.addEventListener('submit', async (e) => {
                 consent: true,
                 language: language,
                 media: media.length > 0 ? media : undefined,
+                logoUrl: logoBase64 || undefined,
+                logoPosition: logoBase64 ? logoPosition.value : undefined,
             }),
         });
 
@@ -255,4 +262,35 @@ function renderPreviews() {
 // Convert uploadedFiles to media array for API
 function getMediaPayload() {
     return uploadedFiles.map(f => f.base64);
+}
+
+// Logo upload handling
+logoDropZone.addEventListener('click', () => logoInput.click());
+logoDropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    logoDropZone.classList.add('dragover');
+});
+logoDropZone.addEventListener('dragleave', () => {
+    logoDropZone.classList.remove('dragover');
+});
+logoDropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    logoDropZone.classList.remove('dragover');
+    handleLogo(e.dataTransfer.files[0]);
+});
+logoInput.addEventListener('change', (e) => {
+    handleLogo(e.target.files[0]);
+});
+
+function handleLogo(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+        logoBase64 = e.target.result;
+        logoPreview.style.backgroundImage = `url(${logoBase64})`;
+        logoPreview.classList.remove('hidden');
+        logoDropZone.querySelector('.drop-icon').classList.add('hidden');
+    };
+    reader.readAsDataURL(file);
 }
